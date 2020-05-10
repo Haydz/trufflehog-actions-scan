@@ -12,6 +12,6 @@ if [ -n "${INPUT_GITHUBTOKEN}" ]; then
 else
   githubRepo="https://github.com/$GITHUB_REPOSITORY" # Default target repository
 fi
-sh -c "cat /regex.json"
+sh -c "cat /regexes.json"
 query="$args $githubRepo" # Build args query with repository url
 trufflehog $query
